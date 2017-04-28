@@ -3,8 +3,10 @@ var app = express();
 var http = require('http').Server(app);
 var port = process.env.PORT || 8080;
 var io = require('socket.io')(http);
+var config = require("./config.js");
+var Session = require('express-session');
 
-app.use(express.static(__dirname + '/app'))
+app.use(express.static(__dirname + '/app'));
 
 io.on('connection', function(socket){
   console.log('a user connected');

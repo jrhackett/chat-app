@@ -7,9 +7,16 @@
     </style>
   </head>
   <body>
-    <ul id="messages"><div id="inner"></div></ul>
-    <form action="">
+    <div id="name">
+      <form id="name-input" action="">
+        <input id="name-in" autocomplete="off" />
+        <button>Start Memeing</button>
+      </form>
+    </div>
+    <ul id="messages"><div id="messages-inner"></div></ul>
+    <form id = "message-input" action="">
       <input id="m" autocomplete="off" /><button>Send</button>
+      <input id="id" hidden />
     </form>
 
     <link href = "/css/styles.css" rel="stylesheet" type="text/css">
