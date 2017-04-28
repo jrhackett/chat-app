@@ -12,7 +12,9 @@ io.on('connection', function(socket){
     console.log('user disconnected');
   });
   socket.on('chat message', function(msg){
-    io.emit('chat message', msg.substring(0, 1000));
+    if(msg.length > 0) {
+      io.emit('chat message', msg.substring(0, 1000));
+    }
   });
 });
 
