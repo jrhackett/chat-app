@@ -29,11 +29,18 @@ body {
 }
 
 #name {
-  position: absolute;
+  position: relative;
   background: white;
   width: 100vw;
   height: 100vh;
   z-index: 10;
+}
+
+#name-inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 #messages { 
